@@ -1,5 +1,9 @@
 import React, { FC } from 'react'
 
+import { AiFillDelete } from 'react-icons/ai'
+
+import style from './TodoItem.module.css'
+
 export interface Todo {
     id: number
     content: string
@@ -12,9 +16,14 @@ interface TodoProps {
 
 const TodoItem: FC<TodoProps> = (props) => {
     const { todo } = props
-    const cls: string = `todo-item ${todo.complete ? 'complete' : ''}`
+    const cls: string = `${style['todo-item']} ${todo.complete ? style['complete'] : ''}`
     return (
-        <div className={cls}>{todo.content}</div>
+        <div className={cls}>
+            <span className={style['todo-content']}>{todo.content}</span>
+            <span className={style['todo-action']}>
+                <AiFillDelete style={{ color: '#ccc' }} />
+            </span>
+        </div>
     )
 }
 
