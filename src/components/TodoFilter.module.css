@@ -1,0 +1,17 @@
+.todo-filter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ddd;
+}
+
+.todo-filter__btn .btn {
+    font-size: 14px;
+    padding: 4px;
+    margin: 0 6px;
+}
+
+.btn.active {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}

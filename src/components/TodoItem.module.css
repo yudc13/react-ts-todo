@@ -3,7 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  margin: 6px 0;
 }
+
+.todo-item .todo-content__wrapper {}
 
 .todo-item .todo-content {
   font-size: 14px;

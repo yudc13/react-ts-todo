@@ -1,0 +1,15 @@
+
+.todo-filter-link {
+    font-size: 14px;
+    padding: 4px;
+    margin: 0 6px;
+}
+
+.todo-filter-link:hover {
+    cursor: pointer;
+}
+
+.todo-filter-link.active {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
