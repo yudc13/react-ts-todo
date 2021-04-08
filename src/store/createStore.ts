@@ -1,10 +1,11 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import { actionLog } from './middlewares/actionLog'
+
 import todoReducer from './todo/todoReduxer'
 
-const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
 const store = createStore(
   todoReducer,
-  composeEnhancers
+  applyMiddleware(actionLog)
 )
 
 export type RootState = ReturnType<typeof store.getState>
